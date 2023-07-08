@@ -1,0 +1,16 @@
+${AnsiBackground.233}${AnsiColor.BLUE}          ${AnsiColor.124}_          ${AnsiColor.GREEN}__________                              ${AnsiColor.YELLOW}_,
+${AnsiBackground.233}${AnsiColor.BLUE}      _.-${AnsiColor.124}(_)${AnsiColor.BLUE}._     ${AnsiColor.GREEN}."          ".      ${AnsiColor.208}.--""--.          ${AnsiColor.CYAN}_.-${AnsiColor.YELLOW}{__}${AnsiColor.CYAN}-._
+${AnsiBackground.233}${AnsiColor.BLUE}    .'________'.   ${AnsiColor.GREEN}| .--------. |    ${AnsiColor.208}.'        '.      ${AnsiColor.CYAN}.:-'`____`'-:.
+${AnsiBackground.233}${AnsiColor.BLUE}   [____________] ${AnsiColor.GREEN}/` |________| `\  ${AnsiColor.208}/   .'``'.   \    ${AnsiColor.CYAN}/_.-"`${AnsiColor.BRIGHT_WHITE}_  _${AnsiColor.CYAN}`"-._\
+${AnsiBackground.233}${AnsiColor.BRIGHT_WHITE}   /  / .\/. \  \${AnsiColor.GREEN}|  / ${AnsiColor.BRIGHT_WHITE}/ .\/. \${AnsiColor.GREEN} \  |${AnsiColor.208}|  .'${AnsiColor.BRIGHT_WHITE}/.\/.\${AnsiColor.208}'.  |  ${AnsiColor.BRIGHT_WHITE}/`   / .\/. \   `\
+${AnsiBackground.233}${AnsiColor.BRIGHT_WHITE}   |  ${AnsiColor.BRIGHT_WHITE}\__/\__/  |${AnsiColor.GREEN}\_/  ${AnsiColor.BRIGHT_WHITE}\__/\__/${AnsiColor.GREEN}  \_/${AnsiColor.208}|  : ${AnsiColor.BRIGHT_WHITE}|_/\_|${AnsiColor.208} ;  |  ${AnsiColor.BRIGHT_WHITE}|    \__/\__/    |
+${AnsiBackground.233}${AnsiColor.BRIGHT_WHITE}   \            /  \            /   ${AnsiColor.208}\ '.\    /.' / ${AnsiColor.CYAN}.-${AnsiColor.BRIGHT_WHITE}\                /${AnsiColor.CYAN}-.
+${AnsiBackground.233}${AnsiColor.BLUE}   /${AnsiColor.BRIGHT_WHITE}'._  --  _.'${AnsiColor.BLUE}\ ${AnsiColor.GREEN} /${AnsiColor.BRIGHT_WHITE}'._  --  _.'${AnsiColor.GREEN}\   ${AnsiColor.208}/'. `'--'` .'\${AnsiColor.CYAN}/   ${AnsiColor.BRIGHT_WHITE}'._-.__--__.-_.'   ${AnsiColor.CYAN}\
+${AnsiBackground.233}${AnsiColor.BLUE}  /_   ${AnsiColor.BRIGHT_WHITE}`""""`   ${AnsiColor.BLUE}_\${AnsiColor.GREEN}/_   ${AnsiColor.BRIGHT_WHITE}`""""`   ${AnsiColor.GREEN}_\ ${AnsiColor.208}/_  `-./\.-'  _\${AnsiColor.CYAN}'.    ${AnsiColor.BRIGHT_WHITE}`""""""""`    ${AnsiColor.CYAN}.'`\
+${AnsiBackground.233}${AnsiColor.BLUE} (__/    '|    \ _)${AnsiColor.GREEN}_|           |_)${AnsiColor.208}_/            \__)${AnsiColor.CYAN}|        '       |   |
+${AnsiBackground.233}${AnsiColor.BLUE}   |_____'|_____|  ${AnsiColor.GREEN} \__________/   ${AnsiColor.208}|              |${AnsiColor.CYAN};`_________'________`;-'
+${AnsiBackground.233}${AnsiColor.BLUE}    '----------'   ${AnsiColor.GREEN} '----------'   ${AnsiColor.208}'--------------'${AnsiColor.CYAN}`--------------------`
+${AnsiColor.GREEN} Spring Boot ${AnsiColor.RED} ${spring-boot.version}${AnsiColor.BRIGHT_WHITE}
+${AnsiBackground.DEFAULT}
+
+${AnsiColor.BLACK}.${AnsiColor.BRIGHT_WHITE}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+    <html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+      th:with="lang=${#locale.language}"
+      th:lang="${lang}">
+
+<head th:fragment="htmlhead">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>ITM SECURITY</title>
+
+    <link th:href="@{/css/styles.css}" rel="stylesheet">
+
+    <link rel="shortcut icon" th:href="@{/img/ITM.svg}" type="image/x-icon"/>
+
+</head>
+
+<body>
+
+<nav th:fragment="navigation" class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+    <div class="container" sec:authorize="isAuthenticated()">
+        <a  class="navbar-brand" href="https://it-mentor.tech/" target="_blank" rel="noopener noreferrer"
+           data-toggle="tooltip" data-placement="bottom" title="Перейти на сайт ITM Space">
+            <img src="/img/ITM.svg" alt="ITM" height="65" >
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item" sec:authorize="isAuthenticated()">
+                    <a class="nav-link " th:href="@{/}" data-toggle="tooltip" data-placement="bottom" title="Главная">
+                        <div class="d-flex flex-column align-items-center">
+                            <img src="/img/home.png" alt="Home" height="45">
+                            <span class="mt-2">Главная</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item" sec:authorize="hasRole('ADMIN')">
+
+                    <a class="nav-link" th:href="@{/admin/new}" data-toggle="tooltip"
+                       data-placement="bottom" title="Добавить пользователя">
+                        <div class="d-flex flex-column align-items-center">
+                            <img src="/img/user_new.png" alt="New User" height="45">
+                            <span class="mt-2">Новый</span><br>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item" sec:authorize="hasRole('ADMIN')">
+                    <a class="nav-link" th:href="@{/admin}" data-toggle="tooltip"
+                       data-placement="bottom" title="Список пользователей">
+                        <div class="d-flex flex-column align-items-center">
+                            <img src="/img/users_list.png" alt="List User" height="45">
+                            <span class="mt-2">Список</span><br>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="nav-item" sec:authorize="isAuthenticated()">
+                    <a class="nav-link" th:href="@{/user}" data-toggle="tooltip"
+                       data-placement="bottom" title="Информация о пользователе">
+                        <div class="d-flex flex-column align-items-center">
+                            <img src="/img/user_info.png" alt="List User" height="45">
+                            <span class="mt-2">Данные</span><br>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="nav-item" sec:authorize="isAuthenticated()">
+                    <a class="nav-link" th:href="@{/logout}" data-toggle="tooltip" data-placement="bottom"
+                       title="Выход">
+                        <div class="d-flex flex-column align-items-center">
+                            <img src="/img/logout.png" alt="Logout" height="45">
+                            <span class="mt-2">Выход</span><br>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+</body>
+</html>
