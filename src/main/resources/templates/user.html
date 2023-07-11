@@ -14,6 +14,7 @@
                 <p class="display-4">Личные данные</p>
                 <hr class="my-4">
                 <p><b>Привет, </b><span th:text="${#strings.capitalizeWords(user.getFirstName()) + ' ' + #strings.capitalizeWords(user.getLastName())}"/>!</p>
+                <p><b>Ваш ID: </b><span th:text="*{getId()}"/></p>
                 <p><b>Ваш email: </b><span th:text="*{getEmail()}"/></p>
                 <p>
                     <b>Ваши роли:</b>
