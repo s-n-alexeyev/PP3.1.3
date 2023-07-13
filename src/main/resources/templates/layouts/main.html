@@ -13,7 +13,6 @@
     <link th:href="@{/css/styles.css}" rel="stylesheet">
 
     <link rel="shortcut icon" th:href="@{/img/ITM.svg}" type="image/x-icon"/>
-
 </head>
 
 <body>
@@ -36,26 +35,7 @@
                     <a class="nav-link " th:href="@{/}" data-toggle="tooltip" data-placement="bottom" title="Главная страница">
                         <div class="d-flex flex-column align-items-center">
                             <img src="/img/home.png" alt="Home" height="45">
-                            <span class="mt-2">Главная</span>
-                        </div>
-                    </a>
-                </li>
-                <li class="nav-item" sec:authorize="hasRole('ADMIN')">
-
-                    <a class="nav-link" th:href="@{/admin/new}" data-toggle="tooltip"
-                       data-placement="bottom" title="Добавить пользователя">
-                        <div class="d-flex flex-column align-items-center">
-                            <img src="/img/user_new.png" alt="New User" height="45">
-                            <span class="mt-2">Новый</span><br>
-                        </div>
-                    </a>
-                </li>
-                <li class="nav-item" sec:authorize="hasRole('ADMIN')">
-                    <a class="nav-link" th:href="@{/admin}" data-toggle="tooltip"
-                       data-placement="bottom" title="Список пользователей">
-                        <div class="d-flex flex-column align-items-center">
-                            <img src="/img/users_list.png" alt="List User" height="45">
-                            <span class="mt-2">Список</span><br>
+                            <span class="mt-2">Главная</span><br>
                         </div>
                     </a>
                 </li>
@@ -70,6 +50,26 @@
                     </a>
                 </li>
 
+                <li class="nav-item" sec:authorize="hasRole('ADMIN')">
+                    <a class="nav-link" th:href="@{/admin}" data-toggle="tooltip"
+                       data-placement="bottom" title="Список пользователей">
+                        <div class="d-flex flex-column align-items-center">
+                            <img src="/img/users_list.png" alt="List User" height="45">
+                            <span class="mt-2">Список</span><br>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="nav-item" sec:authorize="hasRole('ADMIN')">
+                    <a class="nav-link" th:href="@{/admin/new}" data-toggle="tooltip"
+                       data-placement="bottom" title="Добавить пользователя">
+                        <div class="d-flex flex-column align-items-center">
+                            <img src="/img/user_new.png" alt="New User" height="45">
+                            <span class="mt-2">Новый</span><br>
+                        </div>
+                    </a>
+                </li>
+
                 <li class="nav-item" sec:authorize="isAuthenticated()">
                     <a class="nav-link" th:href="@{/logout}" data-toggle="tooltip" data-placement="bottom"
                        title="Покинуть приложение">
@@ -79,6 +79,7 @@
                         </div>
                     </a>
                 </li>
+
             </ul>
         </div>
     </div>
