@@ -10,7 +10,7 @@
 <div class="container">
     <div class="row">
         <div class="col text-center">
-            <h1 class="mt-5" th:text="${user.id} ? 'ИЗМЕНЕНИЕ' : 'СОЗДАНИЕ'"></h1>
+            <h1 class="mt-5" th:text="${user.id} ? 'ИЗМЕНЕНИЕ (ID=' + ${user.id} +')': 'СОЗДАНИЕ'"></h1>
         </div>
     </div>
 </div>
@@ -71,7 +71,7 @@
             <span th:text="*{getId()} ? 'Изменить' : 'Создать'"></span>
         </button>
 
-        <a class="btn btn-light border-dark" href="/admin">
+        <a class="btn btn-light border-dark" href="javascript:history.back()">
             <img src="/img/cancel.png" alt="Cancel" width="25" height="25"
                  style="vertical-align: middle; margin-right: 5px;">
             Отмена

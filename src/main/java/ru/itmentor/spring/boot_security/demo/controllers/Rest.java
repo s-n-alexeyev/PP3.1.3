@@ -35,21 +35,23 @@ public class Rest {
         userService.createOrUpdateUser(user);
         return user;
     }
-@PutMapping
+
+    @PutMapping
     public User updateUser(@RequestBody User user) {
         userService.createOrUpdateUser(user);
         return user;
     }
-@DeleteMapping("/user/{id}")
-    private InfoString deleteUser(@PathVariable long id){
-    User user = userService.readUser(id);
-    if (user == null) {
-        throw new BadUserIdException("Пользователь с id = " + id + " отсутствует");
-    }
-        userService.deleteUser(id);
-    InfoString info = new InfoString();
-    info.setInfo("Пользователь с id = " + id + " удалён");
 
-    return info;
-}
+    @DeleteMapping("/user/{id}")
+    private InfoString deleteUser(@PathVariable long id) {
+        User user = userService.readUser(id);
+        if (user == null) {
+            throw new BadUserIdException("Пользователь с id = " + id + " отсутствует");
+        }
+        userService.deleteUser(id);
+        InfoString info = new InfoString();
+        info.setInfo("Пользователь с id = " + id + " удалён");
+
+        return info;
+    }
 }

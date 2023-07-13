@@ -41,7 +41,7 @@ public class AdminController {
         return "form";
     }
 
-    @GetMapping("/{id}/edit")
+    @GetMapping("/edit/{id}")
     public String editUserForm(@PathVariable(value = "id") long id, Model model) {
         model.addAttribute("user", userService.readUser(id));
         model.addAttribute("allRoles", userService.allRoles());

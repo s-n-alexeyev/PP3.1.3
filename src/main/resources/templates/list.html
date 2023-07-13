@@ -29,7 +29,7 @@
         <div class="col" th:text="${user.getLastName()}"/>
         <div class="col text-center" th:text="${user.getEmail()}"/>
         <div class="col text-center">
-            <a type="button" th:href="@{/admin/{id}/edit(id=${user.getId()})}" class="btn btn-secondary"
+            <a type="button" th:href="@{/admin/edit/{id}(id=${user.getId()})}" class="btn btn-secondary"
                th:classappend="${rowStat.count % 2 == 0 ? 'bg-light text-dark' : 'bg-secondary text-white'}">
                 <img src="/img/edit.png" alt="Edit" width="25" height="25"
                      style="vertical-align: middle; margin-right: 1px;">

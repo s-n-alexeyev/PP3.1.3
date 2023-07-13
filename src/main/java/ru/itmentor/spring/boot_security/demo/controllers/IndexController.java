@@ -13,7 +13,6 @@ import ru.itmentor.spring.boot_security.demo.configs.LoginException;
 
 import javax.servlet.http.HttpSession;
 
-
 @Controller
 @RequestMapping("/")
 public class IndexController {
