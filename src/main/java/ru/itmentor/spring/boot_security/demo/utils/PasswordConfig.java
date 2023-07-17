@@ -1,4 +1,4 @@
-package ru.itmentor.spring.boot_security.demo.configs;
+package ru.itmentor.spring.boot_security.demo.utils;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
