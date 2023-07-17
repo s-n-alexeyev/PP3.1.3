@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import ru.itmentor.spring.boot_security.demo.exceptions.AppMessage;
+import ru.itmentor.spring.boot_security.demo.dtos.AppMessage;
 import ru.itmentor.spring.boot_security.demo.models.User;
 import ru.itmentor.spring.boot_security.demo.services.UserService;
 
@@ -14,8 +14,6 @@ import ru.itmentor.spring.boot_security.demo.services.UserService;
 public class Admin  {
 
     private final UserService userService;
-
-
 
     @PostMapping("/admin")
     public User addNewUser(@RequestBody User user) {

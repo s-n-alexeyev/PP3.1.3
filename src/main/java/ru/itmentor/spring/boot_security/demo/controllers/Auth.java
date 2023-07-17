@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import ru.itmentor.spring.boot_security.demo.dtos.JwtRequest;
 import ru.itmentor.spring.boot_security.demo.dtos.JwtResponse;
-import ru.itmentor.spring.boot_security.demo.exceptions.AppMessage;
+import ru.itmentor.spring.boot_security.demo.dtos.AppMessage;
 import ru.itmentor.spring.boot_security.demo.services.UserService;
 import ru.itmentor.spring.boot_security.demo.utils.JwtTokenUtils;
 

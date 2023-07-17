@@ -7,13 +7,15 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import ru.itmentor.spring.boot_security.demo.exceptions.AppMessage;
+import ru.itmentor.spring.boot_security.demo.dtos.AppMessage;
 import ru.itmentor.spring.boot_security.demo.services.UserService;
+
 @RestController
 @AllArgsConstructor
 @RequestMapping("/api/v1")
 public class User {
     private final UserService userService;
+
     @GetMapping("/users")
     public ResponseEntity<?> showAllUsers() {
         try {

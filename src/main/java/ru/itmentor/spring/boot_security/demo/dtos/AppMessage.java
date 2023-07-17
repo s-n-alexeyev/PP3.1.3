@@ -1,4 +1,4 @@
-package ru.itmentor.spring.boot_security.demo.exceptions;
+package ru.itmentor.spring.boot_security.demo.dtos;
 
 import lombok.Data;
 
