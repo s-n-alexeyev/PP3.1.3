@@ -15,19 +15,19 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.HttpStatusEntryPoint;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.thymeleaf.extras.springsecurity5.dialect.SpringSecurityDialect;
-import ru.itmentor.spring.boot_security.demo.services.UserService;
+
 
 @EnableWebSecurity
 //        (debug = true)
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
     // сервис, с помощью которого тащим пользователя
-    private final UserService userDetailService;
+    private final UserDetailsConfig userDetailService;
 
     private final PasswordEncoder passwordEncoder;
     private final JwtRequestFilter jwtRequestFilter;
 
     @Autowired
-    public SecurityConfig(UserService userDetailService,
+    public SecurityConfig(UserDetailsConfig userDetailService,
                           PasswordEncoder passwordEncoder, JwtRequestFilter jwtRequestFilter) {
         this.userDetailService = userDetailService;
         this.passwordEncoder = passwordEncoder;

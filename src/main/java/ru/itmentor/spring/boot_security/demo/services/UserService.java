@@ -1,10 +1,6 @@
 package ru.itmentor.spring.boot_security.demo.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -13,13 +9,11 @@ import ru.itmentor.spring.boot_security.demo.models.User;
 import ru.itmentor.spring.boot_security.demo.repositories.RoleRepository;
 import ru.itmentor.spring.boot_security.demo.repositories.UserRepository;
 
-import javax.transaction.Transactional;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 @Service
-public class UserService implements UserDetailsService {
+public class UserService {
 
     private final UserRepository userRepository;
     private final RoleRepository roleRepository;
@@ -35,8 +29,6 @@ public class UserService implements UserDetailsService {
     public List<User> getAllUsers() {
         return userRepository.findAll();
     }
-
-
 
     public void createUser(User user) {
         user.setPassword(passwordEncoder.encode(user.getPassword()));
@@ -79,20 +71,5 @@ public class UserService implements UserDetailsService {
         return userRepository.findByEmail(username);
     }
 
-    @Override
-    @Transactional
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        User user = findByEmail(username).orElseThrow(() -> new UsernameNotFoundException(
-                String.format("Пользователь '%s' не найден", username)));
 
-        return new org.springframework.security.core.userdetails.User(
-                user.getEmail(), //в качестве имени
-                user.getPassword(),
-                //стримом конвертируем коллекцию ролей в GrantedAuthority
-                user.getRoles()
-                        .stream()
-                        .map(role -> new SimpleGrantedAuthority(role.getName()))
-                        .collect(Collectors.toList())
-        );
-    }
 }
